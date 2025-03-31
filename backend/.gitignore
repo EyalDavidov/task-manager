@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual Environments
+venv/
+env/
+
+# Environment Variables
+.env
+
+# MySQL Dump files (optional)
+*.sql
+
+# VSCode & system files
+.vscode/
+.DS_Store
