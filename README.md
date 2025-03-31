@@ -148,9 +148,3 @@ JWT_SECRET_KEY=your_jwt_secret_key
 ```
 
 You can refer to `backend/.env.example` as a template.
-
----
-
-## 💬 Contact
-
-Feel free to reach out for any questions or improvements 😄
