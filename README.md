@@ -81,6 +81,43 @@ npm run dev
 | POST   | `/signup` | Register new user     |
 | POST   | `/login`  | Login and receive JWT |
 
+#### Example request (POST /signup):
+
+```json
+{
+  "email": "user@example.com",
+  "username": "eyal",
+  "password": "123456"
+}
+```
+
+#### Example response:
+
+```json
+{
+  "message": "User registered successfully"
+}
+```
+
+#### Example request (POST /login):
+
+```json
+{
+  "email": "user@example.com",
+  "password": "123456"
+}
+```
+
+#### Example response:
+
+```json
+{
+  "access_token": "eyJhbGciOiJIUzI1NiIsInR..."
+}
+```
+
+---
+
 ### 📋 Tasks
 
 | Method | Endpoint      | Description                   |
@@ -89,13 +126,6 @@ npm run dev
 | POST   | `/tasks`      | Create a new task             |
 | PUT    | `/tasks/<id>` | Update a task                 |
 | DELETE | `/tasks/<id>` | Delete a task                 |
-
-### 🧩 Subtasks
-
-| Method | Endpoint               | Description            |
-| ------ | ---------------------- | ---------------------- |
-| GET    | `/tasks/<id>/subtasks` | Get subtasks of a task |
-| POST   | `/tasks/<id>/subtasks` | Add subtask to a task  |
 
 #### Example request (POST /tasks):
 
@@ -113,6 +143,33 @@ npm run dev
 ```json
 {
   "message": "Task created successfully"
+}
+```
+
+---
+
+### 🧩 Subtasks
+
+| Method | Endpoint               | Description            |
+| ------ | ---------------------- | ---------------------- |
+| GET    | `/tasks/<id>/subtasks` | Get subtasks of a task |
+| POST   | `/tasks/<id>/subtasks` | Add subtask to a task  |
+
+#### Example request (POST /tasks/1/subtasks):
+
+```json
+{
+  "title": "Style component",
+  "status": "pending",
+  "due_date": "2025-04-11"
+}
+```
+
+#### Example response:
+
+```json
+{
+  "message": "Subtask created successfully"
 }
 ```
 
