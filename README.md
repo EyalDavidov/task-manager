@@ -190,7 +190,7 @@ npm run dev
 
 ## 📎 Repository
 
-[GitHub Repo](https://github.com/YOUR_USERNAME/task-manager)
+[GitHub Repo](https://github.com/EyalDavidov/task-manager)
 
 ---
 
