@@ -46,7 +46,13 @@ const TaskCard = ({ id, title, description, status, due_date }: TaskProps) => {
         </div>
         <div className="flex flex-col items-end gap-2">
           <button
-            onClick={() => deleteTask(id)}
+            onClick={() => {
+              if (
+                window.confirm("Are you sure you want to delete this task?")
+              ) {
+                deleteTask(id);
+              }
+            }}
             className="text-xs bg-red-500 hover:bg-red-600 text-white px-3 py-1 rounded cursor-pointer"
           >
             Delete

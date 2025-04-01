@@ -75,7 +75,15 @@ const TaskTable = ({ tasks }: Props) => {
                     {expandedTaskId === task.id ? "Hide" : "Subtasks"}
                   </button>
                   <button
-                    onClick={() => deleteTask(task.id)}
+                    onClick={() => {
+                      if (
+                        window.confirm(
+                          "Are you sure you want to delete this task?"
+                        )
+                      ) {
+                        deleteTask(task.id);
+                      }
+                    }}
                     className="text-sm text-red-500 hover:underline cursor-pointer"
                   >
                     Delete
