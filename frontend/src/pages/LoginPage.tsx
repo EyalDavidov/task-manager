@@ -8,9 +8,23 @@ const LoginPage = () => {
   const [error, setError] = useState("");
   const navigate = useNavigate();
 
+  const isValidEmail = (email: string) => {
+    return /[^@\s]+@[^@\s]+\.[^@\s]+/.test(email);
+  };
+
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
     setError("");
+
+    // Client-side validation
+    if (!isValidEmail(email)) {
+      setError("Invalid email format");
+      return;
+    }
+    if (password.length < 6) {
+      setError("Password must be at least 6 characters");
+      return;
+    }
 
     try {
       const res = await axios.post("http://127.0.0.1:5000/login", {

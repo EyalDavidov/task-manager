@@ -66,7 +66,7 @@ const TaskCard = ({ id, title, description, status, due_date }: TaskProps) => {
             {subtasks[id]?.map((sub) => (
               <li
                 key={sub.id}
-                className="bg-gray-100 px-3 py-2 rounded text-sm"
+                className="bg-gray-100 border px-3 py-2 rounded text-sm"
               >
                 <p className="font-medium">{sub.title}</p>
                 <p className="text-xs text-gray-600">
@@ -80,18 +80,18 @@ const TaskCard = ({ id, title, description, status, due_date }: TaskProps) => {
             <input
               type="text"
               placeholder="Subtask title"
-              className="w-full px-3 py-1 border rounded text-sm"
+              className="w-full px-3 py-1 border text-gray-500 rounded text-sm"
               value={newSubtask}
               onChange={(e) => setNewSubtask(e.target.value)}
             />
             <input
               type="date"
-              className="w-full px-3 py-1 border rounded text-sm"
+              className="w-full px-3 py-1 border text-gray-500 rounded text-sm"
               value={newDueDate}
               onChange={(e) => setNewDueDate(e.target.value)}
             />
             <select
-              className="w-full px-3 py-1 border rounded text-sm"
+              className="w-full px-3 py-1 border text-gray-500 rounded text-sm"
               value={newStatus}
               onChange={(e) => setNewStatus(e.target.value)}
             >

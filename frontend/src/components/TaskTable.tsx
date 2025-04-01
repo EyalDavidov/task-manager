@@ -59,7 +59,10 @@ const TaskTable = ({ tasks }: Props) => {
         <tbody>
           {tasks.map((task) => (
             <>
-              <tr key={task.id} className="border-b hover:bg-gray-50">
+              <tr
+                key={task.id}
+                className="border-b border-gray-300 hover:bg-gray-50"
+              >
                 <td className="px-4 py-2 font-medium">{task.title}</td>
                 <td className="px-4 py-2">{task.description}</td>
                 <td className="px-4 py-2 capitalize">{task.status}</td>
@@ -89,7 +92,7 @@ const TaskTable = ({ tasks }: Props) => {
                         subtasks[task.id].map((sub) => (
                           <li
                             key={sub.id}
-                            className="bg-white border p-2 rounded"
+                            className="bg-white border border-gray-300 p-2 rounded"
                           >
                             <p className="font-medium text-sm">{sub.title}</p>
                             <p className="text-xs text-gray-500">
@@ -106,18 +109,18 @@ const TaskTable = ({ tasks }: Props) => {
                       <input
                         type="text"
                         placeholder="Subtask title"
-                        className="px-3 py-1 border rounded w-full sm:w-1/3"
+                        className="px-3 py-1 border border-gray-500 rounded w-full sm:w-1/3 text-gray-500"
                         value={newTitle}
                         onChange={(e) => setNewTitle(e.target.value)}
                       />
                       <input
                         type="date"
-                        className="px-3 py-1 border rounded w-full sm:w-1/3"
+                        className="px-3 py-1 border border-gray-500 rounded w-full sm:w-1/3 text-gray-500"
                         value={newDueDate}
                         onChange={(e) => setNewDueDate(e.target.value)}
                       />
                       <select
-                        className="px-3 py-1 border rounded w-full sm:w-1/3"
+                        className="px-3 py-1 border border-gray-500 rounded w-full sm:w-1/3 text-gray-500"
                         value={newStatus}
                         onChange={(e) => setNewStatus(e.target.value)}
                       >
